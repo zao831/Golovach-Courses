@@ -9,20 +9,21 @@ package lecture_08;
 public class PrintThread implements Runnable {
 	String b;
 	int a;
+
 	public PrintThread(String name, int time) {
-		 this.b = name;
-		 this.a = time;
+		this.b = name;
+		this.a = time;
 	}
-	
+
 	@Override
 	public void run() {
-		 try {
+		try {
 			for (int i = 0; i < 10; i++) {
 				Thread.sleep(a);
 				System.out.print(b + "\n");
 			}
 		} catch (InterruptedException e) {
-			 System.out.println(e);
+			System.out.println(e);
 		}
 	}
 }
